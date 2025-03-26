@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+.container {
+    width: 95%;
+    margin: 60px auto;
+    background: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    text-align: left;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.card {
+    width: 350px;
+    height: 150px;
+    background: black;
+    color: white;
+    padding: 70px;
+    border-radius: 5px;
+    text-align: left;
+    transition: 0.3s;
+    cursor: pointer;
+}
+input[type="checkbox"].select {
+    display: none;
+}
+input[type="checkbox"].select:checked + .card {
+    border: 5px solid #00aaff;
+}
+#toggleSuporte {
+    display: none;
+}
+#toggleSuporte:checked ~ .suporte {
+    display: none;
+}
+.hidden{
+    display: none;
+}
