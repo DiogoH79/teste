@@ -1,0 +1,138 @@
+
+a{
+    border-radius: 20px;
+
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+
+nav :hover{
+    background-color: #34acdd;
+    text-align: center;
+    
+}
+
+header {
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+main{
+    background-image: url(imagens/mulher.png    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+    color: white;
+}
+
+.topic{
+    font-size: 50px;
+    margin-left: 140px;
+    margin-right: 140px
+    
+}
+.subTopic{
+    font-size: 20px ;
+    margin-left: 140px;
+    margin-right: 140px
+}
+.box1 {
+    background-color: #38a9e1;
+    padding: 2rem;
+    font-size: 15px;
+    flex: 1;
+}
+.box2 {
+    background-color: #007ac7;
+    padding: 2rem;
+    font-size: 15px;
+    flex: 1;
+}
+.box3 {
+    background-color: #294e9c;
+    padding: 2rem;
+    font-size: 15px;
+    flex: 1;
+}
+.box {
+    display: flex;
+    margin-left: 140px;
+    margin-right: 140px;
+
+}
+.box1 > button {
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+.box2 > button {
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+.dividate {
+    border-bottom: #007ac7 1px solid;
+    display: flex;
+    justify-content: space-between;
+}
+section {
+    display: flex;
+
+}
+.lastetnews {
+    flex: 2;
+    margin-left: 10px;
+}
+.Linha{
+    display: flex;
+}
+.departments {
+    flex: 1;
+    margin-left: 12px;
+}
+
+.block {
+    height: 200px;
+    width: 200px;
+    background-color: #34acdd
+}
+.table-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.boxx > .data {
+    background-color: #294e9c;
+    color: white;
+    padding: 10px;
+    margin-bottom: 100px;
+}
+.boxx > .dia {
+    background-color: #34acdd;
+    color: white;
+    padding: 10px;
+}
+.boxx > img{
+    width: 400px;
+    margin-top: 20px;
+}
+footer {
+    background-color: black;
+}
+.text {
+    margin-right: 50px;
+}
