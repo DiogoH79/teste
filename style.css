@@ -27,7 +27,7 @@ header {
 }
 
 main{
-    background-image: url(imagens/mulher.png    );
+    background-image: url(mulher.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
