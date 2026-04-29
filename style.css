@@ -7,16 +7,37 @@
 
 body {
     color: #333;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header h2 {
+    font-size: clamp(20px, 3vw, 28px);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
 }
 
 a {
-    border-radius: 20px;
     color: black;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 14px;
+    padding: 9px 12px;
+    font-size: clamp(11px, 1.5vw, 14px);
     text-decoration: none;
-    text-align: center;
+    border-radius: 20px;
 }
 
 nav a:hover {
@@ -24,57 +45,54 @@ nav a:hover {
     color: white;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 8%;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-nav {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
+/* HERO */
 main {
-    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(mulher.png);
+    background-image: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), url(mulher.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 80px 8% 0;
+    padding: clamp(50px, 8vw, 100px) 6% 0;
 }
 
 .topic,
 .subTopic {
-    margin: 0;
-    max-width: 700px;
+    max-width: 750px;
 }
 
 .topic {
-    font-size: 38px;
+    font-size: clamp(24px, 5vw, 55px);
+}
+
+.topic h1 {
+    font-size: inherit;
+    line-height: 1.1;
 }
 
 .subTopic {
-    font-size: 20px;
+    font-size: clamp(15px, 2vw, 20px);
     margin-top: 20px;
+    line-height: 1.6;
 }
 
+.subTopic br {
+    display: none;
+}
+
+/* CAIXAS AZUIS */
 .box {
-    display: flex;
-    margin-top: 60px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: clamp(40px, 6vw, 70px);
 }
 
 .box1,
 .box2,
 .box3 {
-    padding: 2rem;
-    font-size: 15px;
-    flex: 1;
+    padding: clamp(20px, 4vw, 35px);
+    font-size: clamp(14px, 1.6vw, 16px);
+    line-height: 1.5;
 }
 
 .box1 {
@@ -89,153 +107,172 @@ main {
     background-color: #294e9c;
 }
 
-.box1 > button,
-.box2 > button {
+.box1 button,
+.box2 button {
     border: 1px solid white;
     background-color: transparent;
     color: white;
-    cursor: pointer;
     padding: 8px 12px;
+    cursor: pointer;
 }
 
 .dividate {
-    border-bottom: #ffffff80 1px solid;
+    border-bottom: 1px solid rgba(255,255,255,.5);
     display: flex;
     justify-content: space-between;
     gap: 15px;
-    padding: 10px 0;
+    padding: 12px 0;
 }
 
+/* CONTEÚDO */
 section {
-    display: flex;
-    gap: 30px;
-    padding: 50px 8%;
+    width: 100%;
+    padding: clamp(35px, 6vw, 70px) 6%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 35px;
 }
 
-.lastetnews {
-    flex: 2;
-}
-
+.lastetnews,
 .departments {
-    flex: 1;
+    width: 100%;
 }
 
 .Linha {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
     margin-top: 25px;
 }
 
 .boxx {
-    flex: 1;
+    width: 100%;
+}
+
+.boxx > .data,
+.boxx > .dia {
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 15px;
 }
 
 .boxx > .data {
     background-color: #294e9c;
-    color: white;
-    padding: 10px;
-    display: inline-block;
 }
 
 .boxx > .dia {
     background-color: #34acdd;
-    color: white;
-    padding: 10px;
-    display: inline-block;
 }
 
-.boxx > img {
+.boxx img {
     width: 100%;
-    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .boxx h2 {
+    font-size: clamp(18px, 2.2vw, 24px);
     margin: 15px 0;
 }
 
-.block {
-    height: 120px;
-    flex: 1 1 120px;
-    background-color: #34acdd;
+.boxx p,
+.text {
+    font-size: clamp(14px, 1.7vw, 16px);
+    line-height: 1.6;
 }
 
 .table-block {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
     margin: 20px 0;
 }
 
-.text {
-    margin-right: 0;
-    line-height: 1.5;
+.block {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #34acdd;
 }
 
+/* FOOTER */
 footer {
     background-color: black;
-    padding: 30px 8%;
+    padding: 40px 6%;
 }
 
 footer .box {
     margin: 0;
 }
 
-/* TABLET */
+/* TELAS MÉDIAS */
 @media (max-width: 900px) {
     header {
         justify-content: center;
         text-align: center;
     }
 
-    .topic {
-        font-size: 30px;
+    section {
+        grid-template-columns: 1fr;
     }
 
-    .box,
-    section,
+    .box {
+        grid-template-columns: 1fr;
+    }
+
     .Linha {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
-    main {
-        padding-top: 60px;
+    .table-block {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 /* CELULAR */
 @media (max-width: 600px) {
     header {
-        padding: 12px;
+        padding: 12px 15px;
     }
 
-    nav a {
-        font-size: 12px;
-        padding: 8px;
+    nav {
+        gap: 5px;
+    }
+
+    a {
+        padding: 7px 9px;
     }
 
     main {
-        padding: 50px 20px 0;
-    }
-
-    .topic {
-        font-size: 22px;
-    }
-
-    .subTopic {
-        font-size: 16px;
-    }
-
-    .box1,
-    .box2,
-    .box3 {
-        padding: 1.5rem;
+        padding: 45px 20px 0;
     }
 
     section {
         padding: 35px 20px;
     }
 
-    .block {
-        height: 100px;
+    .table-block {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dividate {
+        font-size: 14px;
+    }
+}
+
+/* CELULAR MUITO PEQUENO */
+@media (max-width: 380px) {
+    nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    a {
+        width: 100%;
+    }
+
+    .table-block {
+        grid-template-columns: 1fr;
     }
 }
