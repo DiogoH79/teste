@@ -1,9 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-a{
+body {
+    color: #333;
+}
+
+a {
     border-radius: 20px;
-
     color: black;
-    border: none;
     padding: 10px;
     cursor: pointer;
     font-size: 14px;
@@ -11,128 +19,223 @@ a{
     text-align: center;
 }
 
-
-
-nav :hover{
+nav a:hover {
     background-color: #34acdd;
-    text-align: center;
-    
+    color: white;
 }
 
 header {
-  justify-content: center;
-  align-items: center;
-  justify-content: space-evenly;
-  display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-main{
-    background-image: url(mulher.png);
+nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main {
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(mulher.png);
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    flex-direction: column;
+    background-position: center;
     color: white;
+    padding: 80px 8% 0;
 }
 
-.topic{
-    font-size: 50px;
-    margin-left: 140px;
-    margin-right: 140px
-    
+.topic,
+.subTopic {
+    margin: 0;
+    max-width: 700px;
 }
-.subTopic{
-    font-size: 20px ;
-    margin-left: 140px;
-    margin-right: 140px
+
+.topic {
+    font-size: 38px;
 }
-.box1 {
-    background-color: #38a9e1;
-    padding: 2rem;
-    font-size: 15px;
-    flex: 1;
+
+.subTopic {
+    font-size: 20px;
+    margin-top: 20px;
 }
-.box2 {
-    background-color: #007ac7;
-    padding: 2rem;
-    font-size: 15px;
-    flex: 1;
-}
-.box3 {
-    background-color: #294e9c;
-    padding: 2rem;
-    font-size: 15px;
-    flex: 1;
-}
+
 .box {
     display: flex;
-    margin-left: 140px;
-    margin-right: 140px;
+    margin-top: 60px;
+}
 
+.box1,
+.box2,
+.box3 {
+    padding: 2rem;
+    font-size: 15px;
+    flex: 1;
 }
-.box1 > button {
-    border: 1px solid white;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
+
+.box1 {
+    background-color: #38a9e1;
 }
+
+.box2 {
+    background-color: #007ac7;
+}
+
+.box3 {
+    background-color: #294e9c;
+}
+
+.box1 > button,
 .box2 > button {
     border: 1px solid white;
     background-color: transparent;
     color: white;
     cursor: pointer;
+    padding: 8px 12px;
 }
+
 .dividate {
-    border-bottom: #007ac7 1px solid;
+    border-bottom: #ffffff80 1px solid;
     display: flex;
     justify-content: space-between;
+    gap: 15px;
+    padding: 10px 0;
 }
+
 section {
     display: flex;
-
+    gap: 30px;
+    padding: 50px 8%;
 }
+
 .lastetnews {
     flex: 2;
-    margin-left: 10px;
-}
-.Linha{
-    display: flex;
-}
-.departments {
-    flex: 1;
-    margin-left: 12px;
 }
 
-.block {
-    height: 200px;
-    width: 200px;
-    background-color: #34acdd
+.departments {
+    flex: 1;
 }
-.table-block {
+
+.Linha {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    gap: 25px;
+    margin-top: 25px;
 }
+
+.boxx {
+    flex: 1;
+}
+
 .boxx > .data {
     background-color: #294e9c;
     color: white;
     padding: 10px;
-    margin-bottom: 100px;
+    display: inline-block;
 }
+
 .boxx > .dia {
     background-color: #34acdd;
     color: white;
     padding: 10px;
+    display: inline-block;
 }
-.boxx > img{
-    width: 400px;
+
+.boxx > img {
+    width: 100%;
     margin-top: 20px;
 }
+
+.boxx h2 {
+    margin: 15px 0;
+}
+
+.block {
+    height: 120px;
+    flex: 1 1 120px;
+    background-color: #34acdd;
+}
+
+.table-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 20px 0;
+}
+
+.text {
+    margin-right: 0;
+    line-height: 1.5;
+}
+
 footer {
     background-color: black;
+    padding: 30px 8%;
 }
-.text {
-    margin-right: 50px;
+
+footer .box {
+    margin: 0;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .topic {
+        font-size: 30px;
+    }
+
+    .box,
+    section,
+    .Linha {
+        flex-direction: column;
+    }
+
+    main {
+        padding-top: 60px;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+    header {
+        padding: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    main {
+        padding: 50px 20px 0;
+    }
+
+    .topic {
+        font-size: 22px;
+    }
+
+    .subTopic {
+        font-size: 16px;
+    }
+
+    .box1,
+    .box2,
+    .box3 {
+        padding: 1.5rem;
+    }
+
+    section {
+        padding: 35px 20px;
+    }
+
+    .block {
+        height: 100px;
+    }
 }
